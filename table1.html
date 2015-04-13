@@ -710,6 +710,46 @@ If I get some  time, I may even work on extending this function to get it to add
 </p>
 
 </section>
+<section class='' data-state='' id='slide-26'>
+  <h4>Adding inline CSS to the RMarkdown document</h4>
+  <p><br></p>
+
+<p>The next table is produced by simply adding in the following code after the slide divider in our RMarkdown document.</p>
+
+<p><br></p>
+
+<pre><code>&lt;style&gt;
+table#another1 {border-collapse: collapse; border: 1px solid #900000; 
+background: #FFCCCC; font-family: &#39;Helvetica&#39;, &#39;Arial&#39;, sans-serif; font-size:16px; color: #003333; }
+table#another1 td, th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+table#another1 th {text-shadow: none; font-size:18px; background: #CC0000; color: white; font-weight: 200; text-align: left; padding-right: .1em;  padding-left: .2em; vertical-align: middle; }
+&lt;/style&gt;
+</code></pre>
+
+<p><br></p>
+
+<p>and referring to it like this:</p>
+
+<pre><code>{r, results=&#39;asis&#39;, echo=FALSE}
+tablecode(paintings, tabletype=&quot;another1&quot;)
+
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-27'>
+  
+  <style>
+table#another1 {border-collapse: collapse; border: 1px solid #900000; 
+background: #FFCCCC; font-family: 'Helvetica', 'Arial', sans-serif; font-size:16px; color: #003333; }
+table#another1 td, th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+table#another1 th {text-shadow: none; font-size:18px; background: #CC0000; color: white; font-weight: 200; text-align: left; padding-right: .1em;  padding-left: .2em; vertical-align: middle; }
+</style>
+
+<table id='another1' style='width:100%'>  <tr><th>Painting</th> <th>Artist</th> <th>Year</th> <th>Price</th></tr> <tr><td data-th='Painting'>Nafea Faa Ipoipo</td> <td data-th='Artist'>Paul Gauguin</td> <td data-th='Year'>1892</td> <td data-th='Price'>$300M</td></tr> <tr><td data-th='Painting'>The Card Players</td> <td data-th='Artist'>Paul Cezanne</td> <td data-th='Year'>1892</td> <td data-th='Price'>$259M</td></tr> <tr><td data-th='Painting'>Le Reve</td> <td data-th='Artist'>Pablo Picasso</td> <td data-th='Year'>1932</td> <td data-th='Price'>$155M</td></tr> <tr><td data-th='Painting'>Three Studies of Lucian Freud</td> <td data-th='Artist'>Francis Bacon</td> <td data-th='Year'>1969</td> <td data-th='Price'>$142M</td></tr> <tr><td data-th='Painting'>No. 5, 1948</td> <td data-th='Artist'>Jackson Pollock</td> <td data-th='Year'>1948</td> <td data-th='Price'>$140M</td></tr> </table>
+
+<p><br></p>
+
+</section>
     </div>
   </div>
 </body>
