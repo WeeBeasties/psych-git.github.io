@@ -720,3 +720,50 @@ Just play around with all the settings in the different table templates in the c
 
 If I get some  time, I may even work on extending this function to get it to add inline CSS to the RMarkdown document, thereby allowing the user to on the fly change cell heights, colors, padding, margins, font sizes etc. etc.  without having to go and change the custom.css file....   Anyone want to help then give me an email &#9786;
 </p>
+
+
+---
+
+#### Adding inline CSS to the RMarkdown document
+
+<br>
+
+The next table is produced by simply adding in the following code after the slide divider in our RMarkdown document.
+
+<br>
+
+```
+<style>
+table#another1 {border-collapse: collapse; border: 1px solid #900000; 
+background: #FFCCCC; font-family: 'Helvetica', 'Arial', sans-serif; font-size:16px; color: #003333; }
+table#another1 td, th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+table#another1 th {text-shadow: none; font-size:18px; background: #CC0000; color: white; font-weight: 200; text-align: left; padding-right: .1em;  padding-left: .2em; vertical-align: middle; }
+</style>
+```
+<br>
+
+and referring to it like this:
+
+```
+{r, results='asis', echo=FALSE}
+tablecode(paintings, tabletype="another1")
+
+```
+
+---
+
+<style>
+table#another1 {border-collapse: collapse; border: 1px solid #900000; 
+background: #FFCCCC; font-family: 'Helvetica', 'Arial', sans-serif; font-size:16px; color: #003333; }
+table#another1 td, th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+table#another1 th {text-shadow: none; font-size:18px; background: #CC0000; color: white; font-weight: 200; text-align: left; padding-right: .1em;  padding-left: .2em; vertical-align: middle; }
+</style>
+
+
+```{r, results='asis', echo=FALSE}
+tablecode(paintings, tabletype="another1")
+
+```
+
+<br>
+
