@@ -179,7 +179,7 @@ The following slides give you some example tables styles that can be written int
 
 <br>
 
-All of these tables do require you to write out the table in the long HTML format.  This is fine for tiny tables like the example here, but would be super annoying for any large table.   There are options for turning R output into HTML style code, but I haven't worked out what might be the best solution just yet.
+The first set of table examples require you to write out the table in the long HTML format.  This is fine for tiny tables like the example here, but would be super annoying for any large table.   There are options for turning R output into HTML style code, but I haven't worked out what might be the best solution just yet.  In the last few slides I introduce a little function I wrote to turn a data.frame straight into a nice looking table in one line !
 
 <br>
 All of the following are created by simply modifying the custom css.
